@@ -64,6 +64,30 @@
     	   }
     	   return true;
        }
+       bool contains(string str){
+    	   if(this->Length()<str.length())
+    		   return false;
+    	   else if(this->Length()==str.length()){
+    		   for(int i=0; i<this->Length(); i++){
+    		       if(this->str[i] != str[i]){
+    		       	 return false;
+    		       }
+    		   }
+    		  return true;
+    	   }
+    		else{
+    	   int inpt=0;
+    	   for(int i=0; i<this->Length()- str.length()+1; i++){
+    		   while(this->str[i+inpt] == str[inpt]){
+    			   inpt++;
+    			   if(inpt>=str.length())
+    					   return true;
+    			   }
+    			   inpt=0;
+    		   }
+         }
+    	   return false;
+       }
    };
 
 
