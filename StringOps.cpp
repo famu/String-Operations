@@ -1,10 +1,7 @@
 
 #include<iostream>
 
-
-	using namespace std;
-
-
+using namespace std;
 
    class String {
        string str;
@@ -30,9 +27,6 @@
        }
 
        string subString(int s, int e){
-//    	   cout<<s<<" "<<e<<endl;
-
-
     	   if(s>e) return "";
 
     	   int thisLen = this->Length();
@@ -44,7 +38,6 @@
     		   subStr[i-s] = '\0';
     		   return subStr;
     	   }
-
     	   char subStr[e-s];
     	   int i;
     	   for(i=s;i<=e;i++)
@@ -64,6 +57,7 @@
     	   }
     	   return true;
        }
+
        bool contains(string str){
     	   if(this->Length()<str.length())
     		   return false;
@@ -88,15 +82,17 @@
          }
     	   return false;
        }
+
+
    };
 
 
 
 	int main ()
 		{
-		String str("01");
+		String str("0123456789");
 
-		 cout << str.contains("01") << endl;
+		 cout << str.contains("6789") << endl;
 
 		 return 0;
 
